@@ -38,6 +38,7 @@ void insertion_sort_list(listint_t **list)
 
 			prev->prev = current;
 			prev = current->prev;
+			print_list(*list);
 		}
 
 		current = temp; /* Moving to the next node for the next iteration*/
