@@ -11,7 +11,9 @@ void quick_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 	return; /* no sorting needed if array is empty*/
 
+	print_array(array, size);
 	quick_sort_recursive(array, 0, size - 1);
+	print_array(array, size);
 }
 
 /**
@@ -57,7 +59,8 @@ int lomuto_partition(int *array, int low, int high)
 
 			array[i] = array[j];
 			array[j] = temp;
-			print_array(array, high - low + 1);
+			/*print_array(array, size);*/
+
 		}
 	}
 
@@ -66,7 +69,7 @@ int lomuto_partition(int *array, int low, int high)
 
 	array[i + 1] = array[high];
 	array[high] = temp;
-	print_array(array, high - low + 1);
+	/*print_array(array, size);*/
 
 	return (i + 1);
 }
