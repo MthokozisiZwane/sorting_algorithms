@@ -27,4 +27,8 @@ void quick_sort(int *array, size_t size);
 int lomuto_partition(int *array, int low, int high);
 void quick_sort_recursive(int *array, int low, int high);
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void swap_nodes(listint_t **list, listint_t *left, listint_t *right);
+int forward_pass(listint_t **list, listint_t *current, int *swapped);
+int backward_pass(listint_t **list, listint_t *current, int *swapped);
 #endif  /*SORT_H*/
